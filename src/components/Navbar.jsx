@@ -7,13 +7,13 @@ const Navbar = () => {
   let categories = products ? [...new Set(products.map(product => product.category))] : [];
   
   return (
-    <nav className="w-[18vw] flex flex-col justify-start p-8 items-center bg-gray-700 rounded">
+    <nav className="w-full md:w-[18vw] flex flex-col justify-start p-4 md:p-8 items-center bg-gray-700 rounded shadow md:shadow-none">
       <Link to={'/create'} className="border-2 border-blue-200 p-2 rounded-md hover:bg-blue-300">
         Add New Product
       </Link>
-      <hr className="w-40 text-white mt-5" />
+      <hr className="w-full md:w-40 text-white mt-5" />
       <h1 className="text-xl font-semibold mt-5">Category Filter</h1>
-      <div className="mt-5 space-y-3">
+      <div className="mt-5 space-y-3 w-full">
         <div className='flex items-center'>
           <span className="rounded-full h-3 w-3 mr-2 bg-yellow-200"></span>
           <Link to={'/'} className="text-white hover:text-gray-300">

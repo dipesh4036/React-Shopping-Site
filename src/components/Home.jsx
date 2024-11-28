@@ -15,13 +15,13 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen w-[82vw] bg-gray-800 flex flex-wrap items-center justify-center gap-4 p-4">
+      <div className="min-h-screen w-full md:w-[82vw] bg-gray-800 flex flex-wrap items-center justify-center gap-4 p-4 md:p-6">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <Link
               to={`/details/${product.id}`}
               key={product.id}
-              className="w-64 h-80 bg-gray-300 shadow-lg rounded-lg overflow-hidden flex flex-col hover:cursor-pointer hover:scale-105"
+              className="w-full sm:w-[80%] md:w-64 h-auto sm:h-60 md:h-80 bg-gray-300 shadow-lg rounded-lg overflow-hidden flex flex-col hover:cursor-pointer hover:scale-105 transition-transform duration-200"
             >
               <img
                 className="w-full h-32 object-cover"
